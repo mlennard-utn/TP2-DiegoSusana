@@ -31,14 +31,14 @@ public class BenchmarkService {
 			Benchmark operacion = new OperacionStreams();
 			operacion.imprimirListado(response.getItems());
 		
-			response.setTiempoStreams(((System.currentTimeMillis()/1) - tiempo) );
+			response.setTiempoStreams(((System.currentTimeMillis()/1000) - tiempo) );
 		
 			tiempo = System.currentTimeMillis();
 			tiempo=tiempoSeg(tiempo);
 			
 			operacion = new OperacionFor();
 			operacion.imprimirListado(response.getItems());
-			response.setTiempoFor(((System.currentTimeMillis()/1) - tiempo));
+			response.setTiempoFor(((System.currentTimeMillis()/1000) - tiempo));
 			
 
 			tiempo = System.currentTimeMillis();
@@ -46,7 +46,7 @@ public class BenchmarkService {
 			
 			operacion = new OperacionWhile();
 			operacion.imprimirListado(response.getItems());
-			response.setTiempoWhile(((System.currentTimeMillis()/1) - tiempo));
+			response.setTiempoWhile(((System.currentTimeMillis()/1000) - tiempo));
 			
 
 			return response;
@@ -55,7 +55,7 @@ public class BenchmarkService {
 
 	
 	public long tiempoSeg(long tiempo) {
-		return tiempo/1;
+		return tiempo/1000;
 	}
 
 	
@@ -72,21 +72,21 @@ public class BenchmarkService {
 		
 			Benchmark operacion = new OperacionStreams();
 			response.setResultado(operacion.sumarValores(response.getItems()));
-			response.setTiempoStreams(((System.currentTimeMillis()/1) - tiempo) );
+			response.setTiempoStreams(((System.currentTimeMillis()/1000) - tiempo) );
 		
 			tiempo = System.currentTimeMillis();
 			tiempo=tiempoSeg(tiempo);
 			
 			operacion = new OperacionFor();
 			response.setResultado(operacion.sumarValores(response.getItems()));
-			response.setTiempoFor(((System.currentTimeMillis()/1) - tiempo));
+			response.setTiempoFor(((System.currentTimeMillis()/1000) - tiempo));
 			
 			tiempo = System.currentTimeMillis();
 			tiempo=tiempoSeg(tiempo);
 			
 			operacion = new OperacionWhile();
 			response.setResultado(operacion.sumarValores(response.getItems()));
-			response.setTiempoWhile(((System.currentTimeMillis()/1) - tiempo) );
+			response.setTiempoWhile(((System.currentTimeMillis()/1000) - tiempo) );
 			
 			tiempo = System.currentTimeMillis();
 			tiempo=tiempoSeg(tiempo);
@@ -107,14 +107,14 @@ public class BenchmarkService {
 		
 			Benchmark operacion = new OperacionStreams();
 			response.setResultado(operacion.maximoValor(response.getItems()));
-			response.setTiempoStreams(((System.currentTimeMillis()/1) - tiempo) );
+			response.setTiempoStreams(((System.currentTimeMillis()/1000) - tiempo) );
 		
 			tiempo = System.currentTimeMillis();
 			tiempo=tiempoSeg(tiempo);
 			
 			Benchmark operacion2 = new OperacionFor();
 			response.setResultado(operacion2.maximoValor(response.getItems()));
-			response.setTiempoFor(((System.currentTimeMillis()/1) - tiempo));
+			response.setTiempoFor(((System.currentTimeMillis()/1000) - tiempo));
 		
 			tiempo = System.currentTimeMillis();
 			tiempo=tiempoSeg(tiempo);
@@ -122,7 +122,7 @@ public class BenchmarkService {
 			
 			Benchmark operacion3 = new OperacionWhile();
 			response.setResultado(operacion3.maximoValor(response.getItems()));
-			response.setTiempoWhile(((System.currentTimeMillis()/1) - tiempo));
+			response.setTiempoWhile(((System.currentTimeMillis()/1000) - tiempo));
 		
 			tiempo = System.currentTimeMillis();
 			tiempo=tiempoSeg(tiempo);
