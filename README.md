@@ -1,27 +1,20 @@
-Clonar el proyecto del siguiente repositorio: https://github.com/mlennard-utn/intermedio_tp
 
 1. Modificar el metodo que genera los items para que los valores sean aleatorios (el valor maximo no debe ser mayor a la cantidad de items).
+Correcto pero la generacion aleatoria de numeros esta realizando la impresion de los valores penalizando con tiempo la respuesta que tiene que dar.
 
 2. La cantidad de items no debe superar el valor de la constante CANTIDAD_MAXIMA_ITEMS, el metodo 'imprimir' ya posee esa validacion. Implementar el control en los otros dos metodos de BenchmarkService.
+La validacion esta en 2 lugares, tanto en el metodo del servicio como el metodo accesorio generador de elementos aleatorios.
 
 2a. La excepcion no debe ser RuntimeException, se debe implementar una nueva excepcion incluyendo el mensaje de validacion tal como esta ahora.
-
-3. El servicio BenchmarkService ya hace los calculos con OperacionStreams.
-
-3a. Implementar las operaciones para las clases OperacionFor y OperacionWhile.
+No esta hecho este punto.
 
 3b. Incluir los calculos de tiempo para esas operaciones en el response de los metodos del servicio.
 
 3c. Si la cantidad de items supera el valor de 100 se debe limitar en la respuesta a los primeros y ultimos 50 valores. 
 	OJO! Las operaciones se deben realizar con la cantidad de items requeridos.
+Este punto no se realizo como se encomendo, se limitaron la cantidad de items tanto para la respuesta como para las operaciones.
 
 4. Los tiempos de ejecucion de las operaciones se deben informar en unidades de segundos (la implementacion actual esta en microsegundos).
+Por algun motivo los valores resultado estan siendo redondeados a numeros enteros en vez de a double.
 
-5. En el controlador DateController se debe implementar la operacion que devuelva la fecha (en formato dd/MM/yyyy) del ultimo dia del mes del año solicitado.
-
-5a. Controlar y validar que el mes sea un numero entre 1 y 12. De no ser asi se debe devolver un error HTTP 400 indicando que valor se espera para el mes.
-
-Utilizar alguna extension de Google Chrome (buscar Rest Client Chrome Extension) para probar las peticiones HTTP.
-
-FORMA DE ENTREGA: Enviar correo electronico a mlennard-utn@gmail.com con la URL de su repositorio personal con el TP resuelto.
-FECHA DE ENTREGA: 27/06
+APROBADO, nota final: 7
